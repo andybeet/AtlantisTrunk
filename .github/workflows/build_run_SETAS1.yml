@@ -41,7 +41,7 @@ jobs:
 
       - name: Compile and Run Atlantis in Ubuntu 20.04 using Docker
         run: |
-          docker run --rm -v $(pwd):/workspace -w /workspace ubuntu:20.04 bash -c "
+          docker run --rm -v $(pwd):/workspace -w /workspace ubuntu:18.04 bash -c "
           TZ=America/New_York &&
           ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &&
           apt-get update && 
