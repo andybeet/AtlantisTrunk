@@ -62,6 +62,10 @@ atlantisMerged_INCLUDES += -I$(top_srcdir)/atCLAMLink/include
 atlantisMerged_DEPENDENCIES +=  $(top_srcdir)/atCLAMLink/libatCLAMLink.a
 endif
 
+if RASSESS_LINK_ENABLED
+LIBDIRS += -L$(R_BASE)/lib
+atlantisMerged_LDADD += -lR
+endif
 
 #if SS3_LINK_ENABLED
 #LIBDIRS += -L$(top_srcdir)/atSS3Link
